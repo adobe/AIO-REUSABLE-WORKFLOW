@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 -->
 
-# aio-reusable-workflow
+# aio-reusable-workflows
 
 This project is externalizing github workflows, we will be using this repo as central repo and it's files will be referenced to all other apps and services which share common github wokflow files.
 
