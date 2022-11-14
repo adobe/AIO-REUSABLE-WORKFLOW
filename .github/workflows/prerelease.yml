@@ -1,5 +1,8 @@
 name: publish-prerelease
 
+on:
+  workflow_call:
+
 jobs:
   checkout:
     name: checkout

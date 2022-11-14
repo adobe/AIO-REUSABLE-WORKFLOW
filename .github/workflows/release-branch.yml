@@ -4,8 +4,7 @@
 name: Release Branch CI
 
 on:
-  pull_request:
-    branches: [ 'release-*', 'branch-prerelease' ]
+  workflow_call:
 
 jobs:
   build:

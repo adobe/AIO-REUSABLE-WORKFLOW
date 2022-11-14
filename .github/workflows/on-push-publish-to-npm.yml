@@ -1,10 +1,8 @@
 name: on-push-publish-to-npm
+
 on:
-  push:
-    branches:
-      - master # Change this if not your default branch
-    paths:
-      - 'package.json'
+  workflow_call:
+
 jobs:
   publish:
     # if: github.repository == 'adobe/aio-cli-plugin-app'

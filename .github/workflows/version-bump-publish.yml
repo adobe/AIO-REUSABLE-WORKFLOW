@@ -1,5 +1,9 @@
 name: version-bump-publish
 
+on:
+  pull_request:
+    branches: [ 'release-*', 'branch-prerelease' ]
+
 jobs:
   checkout:
     # if: github.repository == 'adobe/aio-cli-plugin-app'
