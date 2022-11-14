@@ -16,7 +16,7 @@ jobs:
           git config user.email github-actions@github.com
       - uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: [14, 16]
       - run: |
           npm install
           npm test
