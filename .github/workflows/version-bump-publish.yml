@@ -1,8 +1,7 @@
 name: version-bump-publish
 
 on:
-  pull_request:
-    branches: [ 'release-*', 'branch-prerelease' ]
+  workflow_call:
 
 jobs:
   checkout:
