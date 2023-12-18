@@ -6,11 +6,7 @@ on:
 jobs:
   checkout:
     name: checkout
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node-version: [14, 16]
-        os: [ubuntu-latest]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: |
@@ -18,7 +14,7 @@ jobs:
           git config user.email github-actions@github.com
       - uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 18
       - run: |
           npm install
           npm test
@@ -31,4 +27,4 @@ jobs:
         with:
           token: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}
           tag: ${{ github.event.inputs.tag }}
-          access: "public"
+          access: 'public'
