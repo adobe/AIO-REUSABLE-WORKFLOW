@@ -5,6 +5,7 @@ on:
 
 jobs:
   checkout:
+    if: ${{ github.repository_owner == 'adobe' }}
     name: checkout
     runs-on: ubuntu-latest
     steps:
