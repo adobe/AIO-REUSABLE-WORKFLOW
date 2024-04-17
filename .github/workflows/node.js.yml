@@ -5,6 +5,9 @@ name: Node.js CI
 
 on:
   workflow_call:
+    secrets:
+      CODECOV_TOKEN:
+        required: true
 
 jobs:
   build:
@@ -31,3 +34,4 @@ jobs:
       uses: codecov/codecov-action@v4
       with:
         name: ${{ runner.os }} node.js ${{ matrix.node-version }}
+        token: ${{ secrets.CODECOV_TOKEN }}
