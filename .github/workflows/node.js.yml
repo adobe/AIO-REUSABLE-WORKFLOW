@@ -5,6 +5,9 @@ name: Node.js CI
 
 on:
   workflow_call:
+    secrets:
+      CODECOV_TOKEN:
+        required: true
 
 jobs:
   build:
@@ -28,6 +31,7 @@ jobs:
     - run: npm test
     - name: upload coverage
       if: success()
-      uses: codecov/codecov-action@v4.0.1
+      uses: codecov/codecov-action@v4
       with:
         name: ${{ runner.os }} node.js ${{ matrix.node-version }}
+        token: ${{ secrets.CODECOV_TOKEN }}
